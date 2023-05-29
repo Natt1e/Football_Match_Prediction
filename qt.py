@@ -15,6 +15,8 @@ def handleClicked() :
 app = QApplication([])#创建一个对象  作用事提供整个图形界面的管理
 
 window = QMainWindow() #创建一个主窗口对象
+window.setObjectName("wkWgt")  # 替换背景图片只对当前窗口生效 核心代码
+window.setStyleSheet("#wkWgt{border-image:url(Messi.png);}")  # 替换图片路径  核心代码
 window.resize(600, 500) #窗口大小 （宽度，高度）
 window.move(900, 400) #控制窗口显示的时候出现在屏幕显示器的位置
 window.setWindowTitle('赛果预测') #把薪资统计设置在标题栏上
