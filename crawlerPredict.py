@@ -357,7 +357,7 @@ def mainClass(index):
                          leagueGoal, supportRate)
     if data:
         path = "predict.csv"
-        with open(path, 'w', encoding='utf-8', newline='') as f:
+        with open(path, 'a+', encoding='utf-8', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(
                 [homeTeam, awayTeam, round(data.fightRateDif, 4), round(data.fightGoalDif, 4), round(data.recentRateDif, 4),
