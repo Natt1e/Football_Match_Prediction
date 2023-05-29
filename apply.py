@@ -29,12 +29,16 @@ def predict(index) :
         y = y_pred[i]
         homeTeam = all_info[i, 0]
         awayTeam = all_info[i, 1]
+        result = "The predict between %s and %s over:\n" % (homeTeam, awayTeam)
         if y == 0:
             # print("Team %s will get victorious" % awayTeam)
-            return "Team " + awayTeam + " will get victorious"
+            result += "We predict Team " + awayTeam + " will get victorious"
+            return result
         elif y == 1:
             # print("The two teams will play to a draw")
-            return "The two teams will play to a draw"
+            result += "We predict the two teams will play to a draw"
+            return result
         else:
             # print("Team %s will get victorious" % homeTeam)
-            return "Team " + homeTeam + " will get victorious"
+            result += "We predict team " + homeTeam + " will get victorious"
+            return result
